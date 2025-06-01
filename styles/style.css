@@ -1,8 +1,9 @@
-
+body { 
+  font-family: var(--main-font, "IBM Plex mono"), monospace ;
+}
 /* Базовые стили (mobile first) */
 .page {
   background-color: var(--bg-color, #000028);
-  font-family: var(--main-font, "IBM Plex mono"), sans-serif;
   min-width: 375px;
 }
 
@@ -86,39 +87,48 @@
 }
 
 .header__theme-menu-button {
-    background-color: transparent;
-    border: none;
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--accent-color);
-    text-transform: lowercase;
-    cursor: pointer;
-    margin-top: 20px;
-    padding-inline: 13px;
-    padding-block: 1px 4px;
+	border: 1px solid transparent;
+	padding-inline: 0.75rem;
+	padding-block: 0.1875rem;
+	color: var(--accent-color);
+	line-height: 100%;
+	text-transform: lowercase;
+	background-color: transparent;
+	transition: color 0.3s, border-color 0.3s;
+	cursor: pointer;
 }
 
-.header__theme-menu-button:hover { 
-  border: 1px solid var(--border-color);
+.header__theme-menu-button:hover {
+	border-color: var(--border-color);
 }
 
-.header__theme-menu-button:focus { 
-  outline: none;
+.header__theme-menu-button_active {
+	border-color: currentColor;
+}
+
+.header__theme-menu-button:focus {
+	outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: solid 1px;
+	border-bottom-color: currentColor;
 }
 
-.header__theme-menu-button_type_dark { 
-  border: 1px solid var(--border-color);
-  
+.header__theme-menu-button_active {
+	pointer-events: none;
+}
+
+
+
+
+.header__theme-menu-button_active {
+	pointer-events: none;
 }
 
 .text {
-  height: 70px;
   background-color: var(--bg-text-color);
   margin-top: 55px;
+  height: 50%;
 }
 
 .title-text {
@@ -161,12 +171,19 @@
 }
 
 .article__link {
-  text-decoration: none;
-  text-shadow: 2px 2px 0 var(--article-link-color);
+  display: inline-block;
+	border-bottom: 1px solid transparent;
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	text-decoration: none;
+	text-shadow: 2px 2px 0 var(--article-link-color);
+	transition: border 0.3s;
+	cursor: pointer;
 }
 
 .article__link:hover {
-  text-decoration: underline;
+  border-color: currentColor;
 }
 
 .article__link:focus-visible {
@@ -209,7 +226,7 @@
   text-align: center;
 }
 
-/* Адаптация для планшетов (768px и выше) */
+
 @media (min-width: 768px) {
   .header {
     padding: 20px;
@@ -243,9 +260,9 @@
   
   .text {
     width: 50%;
+    height: 50%;
     justify-self: end;
     margin-top: 0;
-    height: 70px;
   }
   
   .content {
@@ -310,7 +327,7 @@
   }
 }
 
-/* Адаптация для десктопов (1024px и выше) */
+
 @media (min-width: 1024px) {
   .header__theme-menu {
     justify-self: center;
