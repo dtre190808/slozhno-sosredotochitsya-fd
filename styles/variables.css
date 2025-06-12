@@ -1,34 +1,23 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 
 :root {
-  --header-title: #DB00FF;
-  --header-shadow-color: #FF0070;
-  --accent-color: #FF0070;
-  --title-text-color: #000028;
-  --bg-text-color: #FF0070;
-  --article-link-color: #FF0070;
-  --bg-light-color: #FFF1F7;
-  --main-font: "IBM Plex mono";
-  --main-font-size: 137px;
-  --font-weight-bold: 700;
-  --font-size: 18px;
   --bg-image: url(../images/cover-image-dark.png);
-  --font-family: "IBM Plex Mono", monospace;
-  --bg-color: #000028;
+  --page-bg: #000028;
+  --accent-color: #ff0070;
+  --header-title-color: #db00ff;
+  --header-text-color: #000028;
+  --section-title-color: #ff0070;
+  --header-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --header-title-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --theme-menu-button: #ff0070;
+  --article-title-color: #000028;
+  --article-text-color: #f1b2ce;
+  --article-link-color: #F1B2CE;
+  --link-color: #ff0070;
+  --link-color-hover:#ff007066;
   --border-color: #ff0070;
   --border-color-hover: #ff007066;
-  --article-text-color: #F1B2CE;
-  --article-link-color: #FF0070;
-  --logo-size: 157px;
-}
-
-
-@media (min-width: 768px) {
-
-  :root {
-    --page-padding: 20px;
-  }
+  --font-size: 18px;
+  --font-family: "IBM Plex Mono", monospace;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
 }
