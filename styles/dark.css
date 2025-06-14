@@ -1,20 +1,16 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
   --bg-image: url(../images/cover-image-dark.png);
   --page-bg: #000028;
+  --accent-color: #ff0070;
+  --header-title-color: #db00ff;
+  --header-text-color: #000028;
+  --border-color: #ff0070;
+  --border-color-hover: #ff007066;
+  --section-title-color: #ff0070;
+  --article-title-color: #000028;
+  --article-text-color: #f1b2ce;
+  --article-link-color: #F1B2CE;
+  --link-color: #ff0070;
+  --link-color-hover:#ff007066;
+  --theme-menu-button: #ff0070;
 }
-
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
-
-
